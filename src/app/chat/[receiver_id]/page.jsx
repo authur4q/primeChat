@@ -17,7 +17,7 @@ export default function ChatComponent() {
   // 📨 Get messages
   const getMes = async () => {
     const resMes = await fetch(
-      `http://localhost:3000/api/messages?sender_id=${sender_id}&receiver_id=${receiver_id}`
+      `/api/messages?sender_id=${sender_id}&receiver_id=${receiver_id}`
     )
     if (resMes.ok) {
       const data = await resMes.json()
